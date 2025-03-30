@@ -2,9 +2,8 @@
 
 This is the windfarms demo. 
 It uses a nodejs script to simulate data every 5s.
-This data is written to a public MQTT broker.
+This data is written to any MQTT broker that is specified on the command line.
 
--getweather.py - This is a Python script that uses the openmeteo API to get ambient temperature and wind speed at Altamont Pass
--wfportfolio.js - This is a nodeJS script that uses Mock.js to simulate data and writes to the MQTT broker every 5s.
+-windsimulators.ts - Typescript code that uses the openmeteo API to get ambient temperature and wind speed at Altamont Pass and generates data for several wind turbines. There is some amount of randomization built in but this is not a physics model.
 
 
