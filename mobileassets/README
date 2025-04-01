@@ -1,0 +1,19 @@
+This demo simulates mining haul trucks and displays their location on Grafana using the TrackMap Plugin. Additionally it displays engine and other parameters as gauges on the same dashboard.
+The simulate route is at a mine in Quebec Canada and the lat/long coordinates were obtained from Open Street Maps. The route is just along the dump road and the idea is that the truck loads up, travels W on Dump Road, dumps its load and then travels back long Dump Road to pick up more ore.
+We also simulate Air Filter Differential Pressure, Crank Case Pressure, RMP, Gear, Load, Cabin Sound Leve and Cabin Temperature.
+
+The files are as follows:
+createdb.sql - SQL to create the database and the supertable
+sample.csv - this has the sample data that the Python scripts use to insert data
+
+insertlocal.py - this allows you to insert data into a local database. To use this file you have to set the hostname, port, password and databasename at the beginning of the script. 
+
+insertcloud.py - this allows you to insert data into a TDengine Cloud instance. To use this script it expects that you have set the environment variables TDENGINE_CLOUD_URL and TDENGINE_CLOUD_TOKEN.
+
+USAGE for insertcloud and insertlocal:
+insertxxxxx.py <assetid> <operatorid> <interval in seconds>
+assetid - any integer (if the assetid doesn't exist, TDengine automatically creates a table)
+operatorid - any integer
+interval - this is the interval in seconds which the scripts use to insert data. Between 5s to 10s works well so that you can see the gauges and map moving in real time.
+
+dashboard.json - JSON for the dashboard. Note that you will have to edit the datasource uid in order to get this to work.

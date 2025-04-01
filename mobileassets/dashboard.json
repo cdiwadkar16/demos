@@ -1,0 +1,627 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 2,
+  "id": 10,
+  "links": [],
+  "liveNow": true,
+  "panels": [
+    {
+      "datasource": {
+        "type": "tdengine-datasource",
+        "uid": "3g8mJqK4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 0,
+        "y": 0
+      },
+      "id": 14,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "9.3.2-45041",
+      "targets": [
+        {
+          "colNameFormatStr": "",
+          "colNameToGroup": "",
+          "datasource": {
+            "type": "tdengine-datasource",
+            "uid": "3g8mJqK4z"
+          },
+          "formatType": "Time series",
+          "queryType": "SQL",
+          "refId": "A",
+          "sql": "select ts,  load as LOAD from mobileassets.haulasset where ts > $from and ts < $to and  assetid = '$assetid'"
+        }
+      ],
+      "title": "Load",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "tdengine-datasource",
+        "uid": "3g8mJqK4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 4,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "9.3.2-45041",
+      "targets": [
+        {
+          "colNameFormatStr": "",
+          "colNameToGroup": "",
+          "datasource": {
+            "type": "tdengine-datasource",
+            "uid": "3g8mJqK4z"
+          },
+          "formatType": "Time series",
+          "queryType": "SQL",
+          "refId": "A",
+          "sql": "select ts, rpm as RPM from mobileassets.haulasset where ts > $from and ts < $to and  assetid = '$assetid'"
+        }
+      ],
+      "title": "RPM",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "tdengine-datasource",
+        "uid": "3g8mJqK4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 7,
+        "y": 0
+      },
+      "id": 12,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "9.3.2-45041",
+      "targets": [
+        {
+          "colNameFormatStr": "",
+          "colNameToGroup": "",
+          "datasource": {
+            "type": "tdengine-datasource",
+            "uid": "3g8mJqK4z"
+          },
+          "formatType": "Time series",
+          "queryType": "SQL",
+          "refId": "A",
+          "sql": "select ts, gear as GEAR from mobileassets.haulasset where ts > $from and ts < $to and  assetid = '$assetid'"
+        }
+      ],
+      "title": "Gear",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "tdengine-datasource",
+        "uid": "3g8mJqK4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 11,
+        "y": 0
+      },
+      "id": 10,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "9.3.2-45041",
+      "targets": [
+        {
+          "colNameFormatStr": "",
+          "colNameToGroup": "",
+          "datasource": {
+            "type": "tdengine-datasource",
+            "uid": "3g8mJqK4z"
+          },
+          "formatType": "Time series",
+          "queryType": "SQL",
+          "refId": "A",
+          "sql": "select ts, fuelremaining from mobileassets.haulasset where ts > $from and ts < $to and assetid = $assetid"
+        }
+      ],
+      "title": "Fuel Remaining",
+      "type": "gauge"
+    },
+    {
+      "autoZoom": true,
+      "datasource": {
+        "type": "tdengine-datasource",
+        "uid": "3g8mJqK4z"
+      },
+      "defaultLayer": "OpenStreetMap",
+      "gridPos": {
+        "h": 11,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 2,
+      "lineColor": "red",
+      "maxDataPoints": 3,
+      "pluginVersion": "9.3.2-45041",
+      "pointColor": "royalblue",
+      "scrollWheelZoom": false,
+      "showLayerChanger": true,
+      "targets": [
+        {
+          "colNameFormatStr": "",
+          "colNameToGroup": "",
+          "datasource": {
+            "type": "tdengine-datasource",
+            "uid": "3g8mJqK4z"
+          },
+          "formatType": "Time series",
+          "queryType": "SQL",
+          "refId": "A",
+          "sql": "select ts,latitude, longitude from mobileassets.haulasset where ts > $from and ts < $to and  assetid = '$assetid'"
+        }
+      ],
+      "title": "Location",
+      "type": "pr0ps-trackmap-panel"
+    },
+    {
+      "datasource": {
+        "type": "tdengine-datasource",
+        "uid": "3g8mJqK4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 0,
+        "y": 4
+      },
+      "id": 6,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "9.3.2-45041",
+      "targets": [
+        {
+          "colNameFormatStr": "",
+          "colNameToGroup": "",
+          "datasource": {
+            "type": "tdengine-datasource",
+            "uid": "3g8mJqK4z"
+          },
+          "formatType": "Time series",
+          "queryType": "SQL",
+          "refId": "A",
+          "sql": "select ts, airfilterdiffpress from mobileassets.haulasset where ts > $from and ts < $to and assetid = $assetid"
+        }
+      ],
+      "title": "Air Filter Differential Pressure",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "tdengine-datasource",
+        "uid": "3g8mJqK4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 5,
+        "x": 6,
+        "y": 4
+      },
+      "id": 15,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "9.3.2-45041",
+      "targets": [
+        {
+          "colNameFormatStr": "",
+          "colNameToGroup": "",
+          "datasource": {
+            "type": "tdengine-datasource",
+            "uid": "3g8mJqK4z"
+          },
+          "formatType": "Time series",
+          "queryType": "SQL",
+          "refId": "A",
+          "sql": "select ts, airinletpress from mobileassets.haulasset where ts > $from and ts < $to and assetid = $assetid"
+        }
+      ],
+      "title": "Air Inlet Pressure",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "tdengine-datasource",
+        "uid": "3g8mJqK4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 5,
+        "x": 11,
+        "y": 4
+      },
+      "id": 16,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "9.3.2-45041",
+      "targets": [
+        {
+          "colNameFormatStr": "",
+          "colNameToGroup": "",
+          "datasource": {
+            "type": "tdengine-datasource",
+            "uid": "3g8mJqK4z"
+          },
+          "formatType": "Time series",
+          "queryType": "SQL",
+          "refId": "A",
+          "sql": "select ts, crankcasepress from mobileassets.haulasset where ts > $from and ts < $to and assetid = $assetid"
+        }
+      ],
+      "title": "Crank Case Pressure",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "tdengine-datasource",
+        "uid": "3g8mJqK4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 5,
+        "y": 11
+      },
+      "id": 8,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "9.3.2-45041",
+      "targets": [
+        {
+          "colNameFormatStr": "",
+          "colNameToGroup": "",
+          "datasource": {
+            "type": "tdengine-datasource",
+            "uid": "3g8mJqK4z"
+          },
+          "formatType": "Time series",
+          "queryType": "SQL",
+          "refId": "A",
+          "sql": "select cabinsoundlevel, cabintemp from mobileassets.haulasset where ts > $from and ts < $to and assetid = $assetid"
+        }
+      ],
+      "title": "Cabin Conditions",
+      "type": "gauge"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 37,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": true,
+          "text": [
+            "750"
+          ],
+          "value": [
+            "750"
+          ]
+        },
+        "datasource": {
+          "type": "tdengine-datasource",
+          "uid": "3g8mJqK4z"
+        },
+        "definition": "select distinct(assetid) from mobileassets.haulasset",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Asset ID",
+        "multi": true,
+        "name": "assetid",
+        "options": [],
+        "query": "select distinct(assetid) from mobileassets.haulasset",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 3,
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-1m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Routes",
+  "uid": "IbyVwqF4k",
+  "version": 30,
+  "weekStart": ""
+}
