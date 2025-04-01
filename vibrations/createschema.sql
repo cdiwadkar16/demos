@@ -1,0 +1,1 @@
+CREATE STABLE vibrationdata.`machines` (ts TIMESTAMP, acceleration FLOAT) tags (plantid VARCHAR(32), machineid VARCHAR(32))

@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@tdengine/rest": "^3.0.2",
+    "@tdengine/websocket": "^3.1.2",
+    "pino": "^9.5.0"
+  }
+}
