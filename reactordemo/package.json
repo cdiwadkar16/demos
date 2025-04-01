@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@inquirer/prompts": "^7.1.0",
+    "commander": "^12.1.0",
+    "inquirer": "^12.1.0",
+    "mqtt": "^5.10.1",
+    "pino": "^9.5.0",
+    "readline-sync": "^1.4.10"
+  }
+}
