@@ -1,0 +1,1 @@
+create stream solarp5 trigger window_close into `renewables`.`p5` (ts,avgpower,string,panelid) subtable(concat('n',tbname)) as select _wstart, avg(`val`),string,panelid from `renewables`.`solarfarmsopc` where name = 'poweroutput_kw' partition by string,panelid interval(5m)
