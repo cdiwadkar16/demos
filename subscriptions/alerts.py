@@ -3,8 +3,8 @@ import os
 import time
 from taosws import Consumer
 
-account_sid = 'AC147eee0ced720db1c06825ff7b9ade6c'
-auth_token = '12e6e5c30ec1ec068415ce95cc85c660'
+account_sid = os.environ["TWILIO_ACCOUNT_SID"]
+auth_token = os.environ["TWILIO_AUTH_TOKEN"]
 client = Client(account_sid, auth_token)
 
 endpoint = os.environ["TDENGINE_CLOUD_ENDPOINT"]
