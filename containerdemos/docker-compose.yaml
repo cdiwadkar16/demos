@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  flashmq:
+    image: mqtt
+    build:
+      context: ./flashmq  # Path to the directory containing the FlashMQ Dockerfile
+    ports:
+      - "1883:1883"  # Expose port 1883 on the host
+    networks:
+      - app-network
+
+  solarfarm:
+    image: solarfarm 
+    build:
+      context: ./solarfarm  # Path to the directory containing the Node.js Dockerfile
+    environment:
+      - MQTT_HOST=flashmq  # Pass the hostname of the flashmq service
+    depends_on:
+      - flashmq  # Ensure flashmq starts before nodejs-app
+    networks:
+      - app-network
+
+  windfarm:
+    image: windfarm
+    build:
+      context: ./windfarm  # Path to the directory containing the Node.js Dockerfile
+    environment:
+      - MQTT_HOST=flashmq  # Pass the hostname of the flashmq service
+    depends_on:
+      - flashmq  # Ensure flashmq starts before nodejs-app
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
