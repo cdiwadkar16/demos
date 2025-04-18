@@ -1,5 +1,3 @@
-##INTRO
-
 This is the windfarms demo. 
 It uses a nodejs script to simulate data every 5s.
 This data is written to any MQTT broker that is specified on the command line.
